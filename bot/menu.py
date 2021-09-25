@@ -5,24 +5,25 @@
 import telebot
 from telebot import types
 
-
+#When user click /start bot will show these menu:
 start = telebot.types.ReplyKeyboardMarkup(True, False)
 start.add('Каталог товаров', 'Личный кабинет')
 start.add('Информация', 'Связаться')
 
+#When user(have id is adminid) click /start bot will show these menu:
 start_admin = telebot.types.ReplyKeyboardMarkup(True, False)
-start_admin.add('Каталог товаров', 'Личный кабинет')
-start_admin.row('Админ панель')
-start_admin.add('Информация', 'Связаться')
+start_admin.add('Product catalog', 'Personal account')
+start_admin.row('Admin panel')
+start_admin.add('Info', 'Contact')
 
-
+#Admin click on Admin panel
 admin = telebot.types.ReplyKeyboardMarkup(True, False)
-admin.row('Настройка ответов бота')
-admin.add('Настройка ассортимента', 'Загрузка нового товара')
-admin.row('Настройка платёжек')
-admin.add('Статистика', 'Рассылка')
-admin.add('Пользователи', 'Логи')
-admin.row('Назад')
+admin.row('Set up bot responses')
+admin.add('Assortment settings', 'Upload new product')
+admin.row('Setting up payments')
+admin.add('Statistics', 'Mailing List')
+admin.add('Users', 'Logs')
+admin.row('Back')
 
 
 users = telebot.types.ReplyKeyboardMarkup(True, False)
